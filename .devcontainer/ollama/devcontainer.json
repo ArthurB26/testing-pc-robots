@@ -8,7 +8,7 @@
             ]
         }
     },
-    "postCreateCommand": "/bin/bash -c 'echo Running postCreateCommand... && curl -fsSL https://ollama.com/install.sh | sh && echo Finished running postCreateCommand. && sudo apt update && sudo apt install -y python3 python3-pip && pip install ollama && ollama serve && ollama pull deepseek-r1:1.5b && ollama pull llama3.2'",
+    "postCreateCommand": "/bin/bash -c 'curl -fsSL https://ollama.com/install.sh | sh && sudo apt update && sudo apt install -y python3 python3-pip && pip install ollama && ollama serve && ollama pull deepseek-r1:1.5b && ollama pull llama3.2'",
 
     "hostRequirements": {
        "cpus": 2,
