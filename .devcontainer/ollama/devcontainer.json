@@ -8,8 +8,7 @@
             ]
         }
     },
-    "postCreateCommand": "/bin/bash -c 'curl -fsSL https://ollama.com/install.sh | sh && sudo apt update && sudo apt install -y python3 python3-pip && pip install ollama && ollama pull deepseek-r1:1.5b && ollama pull llama3.2'",
-
+    "postCreateCommand": "/bin/bash -c 'curl -fsSL https://ollama.com/install.sh | sh && sudo apt update && sudo apt install -y python3 python3-pip tmux && pip install ollama && tmux new-session -d -s ollama_session \"ollama serve\" && sleep 10 && ollama pull deepseek-r1:1.5b && ollama pull llama3.2'",
     "hostRequirements": {
        "cpus": 2,
        "memory": "16gb",
